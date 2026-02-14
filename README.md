@@ -71,3 +71,13 @@ Yes, you can!
 To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
 
 Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+
+## Analytics (Cloudflare Web Analytics)
+
+This project is configured to use Cloudflare Web Analytics in production.
+
+1. Create a site in Cloudflare Web Analytics.
+2. Copy your analytics token.
+3. In GitHub, add repository secret `VITE_CF_WEB_ANALYTICS_TOKEN`.
+4. Optional for local test: create `.env` from `.env.example` and set the same token.
+5. Push to `main` and check analytics in the Cloudflare dashboard.
