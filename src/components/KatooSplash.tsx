@@ -1,5 +1,6 @@
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { useEffect, useMemo, useState } from "react";
+import { KATOO_LOGO_URL } from "@/config/valentine";
 
 interface KatooSplashProps {
   visible: boolean;
@@ -93,7 +94,7 @@ const KatooSplash = ({ visible }: KatooSplashProps) => {
           >
             <div className="relative flex flex-col items-center">
               <img
-                src="/katoo_studio_dev_logo.png"
+                src={KATOO_LOGO_URL}
                 alt="Katoo Studio"
                 className="h-56 w-56 md:h-72 md:w-72 heartbeat drop-shadow-[0_8px_24px_rgba(193,18,31,0.35)]"
               />
@@ -107,3 +108,5 @@ const KatooSplash = ({ visible }: KatooSplashProps) => {
 };
 
 export default KatooSplash;
+
+

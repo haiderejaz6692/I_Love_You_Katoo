@@ -1,5 +1,6 @@
 import { motion, useReducedMotion } from "framer-motion";
 import { useMemo } from "react";
+import { KATOO_LOGO_URL } from "@/config/valentine";
 
 type FlowerDrop = {
   id: number;
@@ -60,7 +61,7 @@ const KatooLogoShowcase = () => {
         />
 
         <motion.img
-          src="/katoo_studio_dev_logo.png"
+          src={KATOO_LOGO_URL}
           alt="Katoo Studio"
           className="relative z-10 w-full h-full object-contain drop-shadow-[0_22px_50px_rgba(193,18,31,0.45)]"
           animate={prefersReducedMotion ? { scale: 1 } : { scale: [1, 1.05, 1], rotate: [0, 1.5, -1, 0] }}
@@ -124,3 +125,5 @@ const KatooLogoShowcase = () => {
 };
 
 export default KatooLogoShowcase;
+
+
